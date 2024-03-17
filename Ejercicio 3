@@ -1,0 +1,25 @@
+//3. Crear una función que devuelva el promedio de un arreglo, en caso de que el
+//arreglo esté vacío debe devolver cero. 
+
+const calcularPromedio = array => {
+  // Verificar si el arreglo está vacío
+  if (array.length === 0) {
+    return 0; 
+  }
+  
+  // Calcular la suma de todos los elementos del arreglo
+  const suma = array.reduce((acc, num) => acc + num, 0);
+  
+  const promedio = suma / array.length;
+  
+  return promedio; // Devolver el promedio
+};
+
+// Ejemplo de uso:
+const arreglo1 = [1, 2, 3, 4, 5];
+const arreglo2 = [];
+const arreglo3 = [10, 20, 30];
+
+console.log("Promedio de arreglo1:", calcularPromedio(arreglo1));
+console.log("Promedio de arreglo2:", calcularPromedio(arreglo2));
+console.log("Promedio de arreglo3:", calcularPromedio(arreglo3));
