@@ -1,0 +1,18 @@
+//5. Crear una función que reciba un arreglo como parámetro y devuelva una copia del
+//arreglo (este debe ser una copia integra y no solo una referencia al arreglo
+//original).
+
+const copiarArreglo = arreglo => {
+  return [...arreglo];
+};
+
+// Ejemplo de uso:
+const arregloOriginal = [1, 2, 3, 4, 5];
+const copia = copiarArreglo(arregloOriginal);
+
+console.log("Arreglo original:", arregloOriginal);
+console.log("Copia del arreglo:", copia);
+copia.push(6);
+
+console.log("Arreglo original después de modificar la copia:", arregloOriginal);
+console.log("Copia del arreglo después de modificarla:", copia);
